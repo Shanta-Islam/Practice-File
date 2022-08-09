@@ -445,3 +445,171 @@ const finalResult = add(result1, result2);
 // function parameter and function return : 1. no return & no parameter . 2. has return & no parameter 3. no return & has parameter 4. has return & has parameter
 
 // module 19-6 no => declare multiple objects with multiple properties
+var student = {
+    id : 115, 
+    name : "Sonam",
+    class : 9, 
+    marks : 98
+}
+console.log(student);
+console.log(student.name);
+student.marks = 100;
+console.log(student);
+
+// module 19-7 no => multiple way to get and set object property
+
+// get obejct property
+var shoppingCart ={
+    books : 3, 
+    sunglass : 2, 
+    mouse : 1,
+    pen: 10
+}
+// when you know the property name, use dot notation
+var penCount = shoppingCart.pen;
+// alternative system
+var penCount1 = shoppingCart["pen"];
+var properties = Object.keys(shoppingCart);
+var propertyValues = Object.values(shoppingCart);
+
+
+var propertyName = "mouse";
+var proper = shoppingCart[propertyName];
+console.log(shoppingCart);
+console.log(penCount);
+console.log(penCount1);
+console.log(properties);
+console.log(propertyValues);
+console.log(proper);
+
+// set obejct property
+shoppingCart.mouse = 15;
+console.log(shoppingCart);
+shoppingCart["mouse"] = 29;
+console.log(shoppingCart);
+shoppingCart[propertyName] = 89;
+console.log(shoppingCart);
+
+
+// module 19-8 no => looping through an object
+
+var shoppingCart ={
+    books : 3, 
+    sunglass : 2, 
+    mouse : 1,
+    pen: 10
+}
+
+var friendsAge = {
+    rahim : 22, 
+    karim: 30, 
+    jamal : 27,
+    robi : 32
+}
+
+const keys = Object.keys(shoppingCart);
+console.log(keys);
+
+const values = Object.values(shoppingCart);
+console.log(values);
+
+for(var i = 0; keys.length; i++){
+    var propertyName = keys[i];
+    var propertyValue = shoppingCart[propertyName];
+    console.log(propertyName, propertyValue);
+}
+
+// for in
+for(var propertyName in shoppingCart){
+    const value = shoppingCart[propertyName];
+    console.log(propertyName, value);
+}
+
+// module 19-9 no => practice problem
+// switch loop
+const color = "white";
+switch(color){
+    case "green":
+        console.log("green");
+        break;
+    case "blue":
+        console.log("blue");
+        break;
+    case "white":
+        console.log("white");
+        break;
+    case "red":
+        console.log("red");
+    default:
+        console.log("no color");
+}
+
+// practice 1. write a function called foo() which prints "foo" and a function called bar() which prints "bar".call function bar() in the foo() function afetr printing.what will be the output?now call the foo() to see the output.  2. write a function called make_avg() which will take an three integers abd return the average of those values.  3. write a function called make_avg() which will take an array of integers and the size of that array and return the average of those values.  4. write a function called odd_even() which takes an integer value and tells whether this value is even or odd.you need to do it in 4 ways: has return + has para, no return + has para  5. you are in a hurray to go to your schoo on time,But when you are crossing the road, the traffic signal is red coloured. in this situation, if you try to cross the road, you maybe in danger. if you nitice a yellow coloured traffic signal, you should stop. if you notice a green coloured traffic signal, you should cross the road. so write va js code , where there is a variable called signal. its value can be green, yello or red and we will get different activities as output depending on the variable.
+
+// module 20-1 no => var , let , const
+
+let age = 10;
+age = 11;
+
+const countryName = "bangladesh";
+// countryName = "chad"; // this const value can not change
+
+console.log(age, countryName);
+
+// module 20-2 no => unit convert inch to feet , miles to kilometer
+// convert inch to feet: feet = inch / 12
+const myInches = 12;
+const myFeet = myInches / 12;
+console.log(myFeet);
+
+function inchToFeet(inch){
+    const feet = inch /12;
+    return feet;
+}
+
+const dadaInches = 144;
+const dadaFeet = inchToFeet(dadaInches);
+console.log(dadaFeet);
+
+// convert miles to km : km = miles * 1.60934
+
+function milesToKilo(miles){
+    const kilometer = miles * 1.60934;
+    return kilometer;
+}
+const milesValue = 12;
+const mil = milesToKilo(milesValue);
+console.log(mil);
+// convert kg to gram
+
+
+// module 20-3 no => check even or odd using function
+function isEven(number){
+    const remainder = number % 2;
+    // console.log(remainder);
+
+    if(remainder === 0){
+        console.log("number is even");
+    }
+    else{
+        console.log("number is odd");
+    }
+}
+isEven(48);
+isEven(77);
+
+function isEven(number){
+    const remainder = number % 2;
+    // console.log(remainder);
+
+    if(remainder === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+const myNumberIsEven = isEven(48);
+console.log(myNumberIsEven);
+const myNumberIsOdd = isEven(77);
+console.log(myNumberIsOdd);
