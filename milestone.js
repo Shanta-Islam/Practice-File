@@ -62,11 +62,15 @@ var numbers = [45, 68, 78, 56, 89];
 numbers.push(65);
 console.log(numbers);
 var friends = ["kalam", "salam", "rahim"];
-friends.push("balam");
+friends.push("balam"); // add elem in the last position of an array
+console.log(friends);
+friends.unshift("galam"); // add elem in the first position of an array
 console.log(friends);
 // use pop to get last element
 console.log(numbers);
 numbers.pop();
+console.log(numbers);
+numbers.shift();
 console.log(numbers);
 var elem = numbers.pop();
 console.log(elem);
@@ -358,4 +362,19 @@ var number = 119;
 var remainder = number % 5;
 console.log(remainder);
 
-// module 18_5-1 no =>
+
+// module 18_5-1 no => practice js
+//1. let's say you have x amount of money , if you have more than 80000, then you will buy a mac. if you have more than 60000 then you will buy gaming laptop, if you have more than 40000 then you will buy lenovo yoga, if you have more than 20000 then you will buy a used laptop otherwise you will use your moble phone.
+
+// module 18_5-2 no => practice loop
+// 1. display "Today" for 39 times
+// 2. display numbers 58 to 98
+// 3. show all even numbers from 412 to 456
+// 4. show all odd numbers 581 to 623
+// 5. declare an array for all the topics that you have learned last few days display as output
+// 6. create an array for all the mobile phones. display all the elements of the array by using a while loop
+// 7. run a loop from 30 to 86. this loop will stop if the values get higher than 44
+// 8. write the price of the books that you have. display the prices if the prices is lower than 200
+
+
+// module 19-2 no => declare function, call function , function vs loop
