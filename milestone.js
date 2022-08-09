@@ -378,3 +378,70 @@ console.log(remainder);
 
 
 // module 19-2 no => declare function, call function , function vs loop
+
+// function declaration
+function startFun(){
+    console.log("stand up")
+}
+// function can call many times
+ startFun(); // call the function
+ startFun(); // call the function
+ startFun(); // call the function
+
+// module 19-3 no => add function parameter, handle multiple parameters
+
+// add function parameter
+function bringSingara(money){
+    console.log("money disen", money);
+    console.log("singara");
+    console.log(money);
+}
+// bringSingara(250);
+
+var taka = 500;
+bringSingara(taka);
+
+// multiple parameter
+function add(num1, num2){
+    total= num1 + num2;
+    console.log("going to add", num1, num2);
+    console.log(total);
+}
+add(5, 2);
+
+// module 19-4 no => return from e function
+function add(num1, num2){
+    console.log(num1, num2);
+    var sum = num1 + num2;
+    // return; // retrun undefined
+    return sum;
+}
+
+var total = add(80, 20);
+console.log(total);
+
+// module 19-5 no => function examples and function summary
+function getAverage(assignmen1, assignmen2, assignmen3){
+    const total = assignmen1 + assignmen2 + assignmen3;
+    const average = total / 3;
+    return average;
+}
+
+const assignmenmarks1 = 40;
+const assignmenmarks2 = 50;
+const assignmenmarks3 = 60;
+var myAverage = getAverage(assignmenmarks1, assignmenmarks2, assignmenmarks3);
+console.log(myAverage);
+
+function add(num1, num2){
+    const sum = num1 + num2;
+    return sum;
+}
+
+const result1 = add(10, 20);
+const result2 = add(30, 40);
+const finalResult = add(result1, result2);
+
+// function parameter and function return : 1. no return & no parameter . 2. has return & no parameter 3. no return & has parameter 4. has return & has parameter
+
+// module 19-6 no => declare multiple objects with multiple properties
